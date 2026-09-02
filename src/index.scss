@@ -1,0 +1,74 @@
+@import './_fonts.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: 'GT-Ultra', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #111111;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button, input, select {
+  font-family: "GT-Ultra", sans-serif;
+}
+
+button {
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  transition: .5s;
+  color: inherit;
+}
+
+.btn-glass-dark {
+  color: white;
+  background: #111111;
+  border: 2px solid #111111;
+  border-radius: 50px;
+  padding: 14px 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    background: #ffcc00;
+    border-color: #ffcc00;
+    color: #111111;
+  }
+}
