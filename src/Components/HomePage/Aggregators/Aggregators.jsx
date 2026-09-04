@@ -3,6 +3,38 @@ import bannerMobile from "../../../Assets/Hero/Banner-Mobile.webp";
 import { aggregators } from "../../../App.util";
 import "./Aggregators.scss";
 
+function CardActions({ item }) {
+  if (item.stores?.length) {
+    return (
+      <div className="aggregator-card__stores">
+        {item.stores.map((store) => (
+          <a
+            key={store.id}
+            href={store.url}
+            className="aggregator-card__store"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Download ${item.name} on ${store.name}`}
+          >
+            <img src={store.icon} alt="" aria-hidden="true" />
+          </a>
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <a
+      href={item.url}
+      className="aggregator-card__btn"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Order Now
+    </a>
+  );
+}
+
 export default function Aggregators() {
   return (
     <section
@@ -20,12 +52,16 @@ export default function Aggregators() {
           Choose Your Aggregators
         </h1>
         <p className="aggregators__subtitle">
-          Order now through Talabat, noon, or Keeta
+          Order now through Talabat, noon, Deliveroo, Keeta, or Smiles
         </p>
 
         <div className="aggregators__grid">
           {aggregators.map((item) => (
             <article key={item.id} className="aggregator-card">
+              {item.offer ? (
+                <span className="aggregator-card__offer">{item.offer}</span>
+              ) : null}
+
               <div className="aggregator-card__brand">
                 <img
                   src={item.icon}
@@ -42,14 +78,7 @@ export default function Aggregators() {
 
               <p className="aggregator-card__description">{item.description}</p>
 
-              <a
-                href={item.url}
-                className="aggregator-card__btn"
-                target={item.url.startsWith("http") ? "_blank" : undefined}
-                rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
-              >
-                Order Now
-              </a>
+              <CardActions item={item} />
             </article>
           ))}
         </div>

@@ -14,18 +14,25 @@ export default function Footer() {
           </a>
 
           <div className="lz-footer__aggregators" aria-label="Order through aggregators">
-            {aggregators.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                className="lz-footer__aggregator"
-                target={item.url.startsWith("http") ? "_blank" : undefined}
-                rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
-                aria-label={`Order on ${item.name}`}
-              >
-                <img src={item.icon} alt={item.name} />
-              </a>
-            ))}
+            {aggregators.map((item) => {
+              const href = item.url || "#aggregators-title";
+              const isExternal = href.startsWith("http");
+
+              return (
+                <a
+                  key={item.id}
+                  href={href}
+                  className="lz-footer__aggregator"
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  aria-label={
+                    isExternal ? `Order on ${item.name}` : `Get the ${item.name} app`
+                  }
+                >
+                  <img src={item.icon} alt={item.name} />
+                </a>
+              );
+            })}
           </div>
         </div>
 
