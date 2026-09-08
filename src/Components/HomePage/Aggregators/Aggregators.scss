@@ -99,7 +99,7 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    min-height: 96px;
+    min-height: 108px;
     justify-content: center;
     margin-bottom: 12px;
   }
@@ -111,9 +111,9 @@
   }
 
   &__logo {
-    height: 28px;
+    height: 42px;
     width: auto;
-    max-width: 140px;
+    max-width: 200px;
     object-fit: contain;
   }
 

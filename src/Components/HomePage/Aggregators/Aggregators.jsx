@@ -52,7 +52,7 @@ export default function Aggregators() {
           Choose Your Aggregators
         </h1>
         <p className="aggregators__subtitle">
-          Order now through Talabat, noon, Deliveroo, Keeta, or Smiles
+          Order now through Talabat, noon, Deliveroo, Careem, Keeta, or Smiles
         </p>
 
         <div className="aggregators__grid">

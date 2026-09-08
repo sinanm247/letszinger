@@ -8,6 +8,8 @@ import smilesLogo from "./Assets/Logo/Smiles-Logo.png";
 import smilesIcon from "./Assets/Logo/Smiles-Logo-Icon.png";
 import deliverooLogo from "./Assets/Logo/Deliveroo-Logo.png";
 import deliverooIcon from "./Assets/Logo/Deliveroo-Logo-Icon.png";
+import careemLogo from "./Assets/Logo/Careem-Logo.png";
+import careemIcon from "./Assets/Logo/Careem-Logo-Icon.png";
 import appleStore from "./Assets/Logo/apple-store.png";
 import googlePlay from "./Assets/Logo/google-play-store.png";
 
@@ -26,7 +28,7 @@ export const aggregators = [
     name: "noonfood",
     logo: noonLogo,
     icon: noonIcon,
-    url: "https://food.noon.com/uae-en/outlet/LTSZNGYUBM/",
+    url: "https://food.noon.com/en-ae/outlet/LTSZNGG9SB",
     offer: "30% OFF",
     description: "Order your favorites for delivery",
   },
@@ -40,26 +42,22 @@ export const aggregators = [
     description: "Order your favorites for delivery",
   },
   {
+    id: "careem",
+    name: "Careem",
+    logo: careemLogo,
+    icon: careemIcon,
+    url: "https://link.careem.com/UoK84nz9Z1YJG",
+    offer: "30% OFF",
+    description: "Order your favorites for delivery",
+  },
+  {
     id: "keeta",
     name: "Keeta",
     logo: keetaLogo,
     icon: keetaIcon,
+    url: "https://url-eu.mykeeta.com/jiL41zKz",
     offer: "50% OFF",
-    description: "Download the app to order your favorites",
-    stores: [
-      {
-        id: "apple",
-        name: "App Store",
-        icon: appleStore,
-        url: "https://apps.apple.com/us/app/keeta-food-delivery/id1662451643",
-      },
-      {
-        id: "google",
-        name: "Google Play",
-        icon: googlePlay,
-        url: "https://play.google.com/store/apps/details?id=com.sankuai.sailor.afooddelivery&hl=en",
-      },
-    ],
+    description: "Order your favorites for delivery",
   },
   {
     id: "smiles",
